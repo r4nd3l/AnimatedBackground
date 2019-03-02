@@ -18,16 +18,18 @@
 
 .brand{
   margin: 0;
-  padding: 0.5em;
+  padding: 0.5em 0.5em 1.5em;
   position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--gr-);
+  color: white;
   font-family: Roboto;
   z-index: 1;
   font-size: 3em;
   text-shadow: var(--ts-);
+  background: rgba(0,0,0,0.5);
+  border-radius: 14px;
 }
 
 .slogan{
@@ -37,53 +39,161 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--gr-);
+  color: white;
   font-family: Roboto;
+  z-index: 1;
   font-size: 1.2em;
   text-shadow: var(--ts-);
 }
 
-body{
-  animation: anim 8s infinite;
+#crossfade > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  opacity: 0;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-animation: imageAnimation 30s linear infinite 0s;
+  -moz-animation: imageAnimation 30s linear infinite 0s;
+  -o-animation: imageAnimation 30s linear infinite 0s;
+  -ms-animation: imageAnimation 30s linear infinite 0s;
+  animation: imageAnimation 30s linear infinite 0s;
 }
 
-@keyframes anim {
-  0%{
-    /* background: #2E5266; */
-    background: url(../img/img_05.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  20%{
-    /* background: #6E8898; */
-    background: url(../img/img_10.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  40%{
-    /* background: #9FB1BC; */
-    background: url(../img/img_05.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  60%{
-    /* background: #D3D0CB; */
-    background: url(../img/img_10.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  80%{
-    /* background: #E2C044; */
-    background: url(../img/img_05.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  100%{
-    /* background: #0CA98A; */
-    background: url(../img/img_10.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+#crossfade > img:nth-child(2)  {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+#crossfade > img:nth-child(3) {
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+#crossfade > img:nth-child(4) {
+  -webkit-animation-delay: 18s;
+  -moz-animation-delay: 18s;
+  -o-animation-delay: 18s;
+  -ms-animation-delay: 18s;
+  animation-delay: 18s;
+}
+
+#crossfade > img:nth-child(5) {
+  -webkit-animation-delay: 24s;
+  -moz-animation-delay: 24s;
+  -o-animation-delay: 24s;
+  -ms-animation-delay: 24s;
+  animation-delay: 24s;
+}
+
+@-webkit-keyframes imageAnimation {
+    0%{
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+    }
+    8%{
+      opacity: 1;
+      -webkit-animation-timing-function: ease-out;
+    }
+    17%{
+      opacity: 1
+    }
+    25%{
+      opacity: 0
+    }
+    100%{
+      opacity: 0
+    }
+}
+
+@-moz-keyframes imageAnimation {
+    0%{
+      opacity: 0;
+      -moz-animation-timing-function: ease-in;
+    }
+    8%{
+      opacity: 1;
+      -moz-animation-timing-function: ease-out;
+    }
+    17%{
+      opacity: 1
+    }
+    25%{
+      opacity: 0
+    }
+    100%{
+      opacity: 0
+    }
+}
+
+@-o-keyframes imageAnimation {
+    0%{
+      opacity: 0;
+      -o-animation-timing-function: ease-in;
+    }
+    8%{
+      opacity: 1;
+      -o-animation-timing-function: ease-out;
+    }
+    17%{
+      opacity: 1
+    }
+    25%{
+      opacity: 0
+    }
+    100%{
+      opacity: 0
+    }
+}
+
+@-ms-keyframes imageAnimation {
+    0%{
+      opacity: 0;
+      -ms-animation-timing-function: ease-in;
+    }
+    8%{
+      opacity: 1;
+      -ms-animation-timing-function: ease-out;
+    }
+    17%{
+      opacity: 1
+    }
+    25%{
+      opacity: 0
+    }
+    100%{
+      opacity: 0
+    }
+}
+
+@keyframes imageAnimation {
+    0%{
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    8%{
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    17%{
+      opacity: 1
+    }
+    25%{
+      opacity: 0
+    }
+    100%{
+      opacity: 0
+    }
 }
 
 
